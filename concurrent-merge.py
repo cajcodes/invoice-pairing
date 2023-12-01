@@ -71,7 +71,7 @@ def find_and_merge_matching_pages(invoices_pdf_path, work_orders_pdf_path):
     invoices_reader = PdfReader(invoices_pdf_path)
     invoice_pages_data = [(invoices_pdf_path, i, work_orders_pdf_path) for i in range(len(invoices_reader.pages))]
 
-    with ThreadPoolExecutor(max_workers=6) as executor:
+    with ThreadPoolExecutor() as executor: # max_workers=6 in ()
         executor.map(process_invoice_page, invoice_pages_data)
 
 # Paths to your PDF files
