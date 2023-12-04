@@ -75,7 +75,7 @@ def find_and_merge_matching_pages(invoices_pdf_path, work_orders_pdf_path):
         executor.map(process_invoice_page, invoice_pages_data)
 
 # Paths to your PDF files
-invoices_pdf_path = 'invoice-2-merged.pdf'
+invoices_pdf_path = 'invoice-2-osp.pdf'
 work_orders_pdf_path = 'wo_invoice-2.pdf'
 
 find_and_merge_matching_pages(invoices_pdf_path, work_orders_pdf_path)

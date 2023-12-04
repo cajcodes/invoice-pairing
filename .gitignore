@@ -139,3 +139,4 @@ cython_debug/
 *.jpg
 *.jpeg
 .DS_Store
+*.csv
